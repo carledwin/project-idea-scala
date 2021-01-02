@@ -1,2 +1,6 @@
 *.class
 *.log
+/out/
+.idea
+.idea/**
+project-idea-scala.iml
