@@ -1,5 +1,7 @@
 package lectures.part1basics
 
+import lectures.part2oop.InheritanceAndTraits.Truck
+
 object Objects {
 
   //SCALA DOES NOT HAVE CLASS-LEVEL FUNCTIONALITY ("static)
@@ -13,6 +15,9 @@ object Objects {
 
     println(Person.N_EYES)
     println(Person.canFly)
+
+    //can't be extends becuase is sealed when can be extended only at the same file
+    //class FireEngine extends Truck
 
     val mary = Person
     val jon = Person
