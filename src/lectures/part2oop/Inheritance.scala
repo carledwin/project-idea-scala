@@ -1,6 +1,6 @@
 package lectures.part2oop
 
-object InheritanceAndTraits extends App {
+object Inheritance extends App {
 
 
   //constructor
@@ -11,6 +11,8 @@ object InheritanceAndTraits extends App {
   class Adult(name: String, age: Int, idCard: String) extends Person(name)
 
   class Animal {
+    //modifiers: private, protected, default access (none=public)
+
     val creatureType = "wild"
     protected def eat = println("nomnom")
     final def drink = println("Water")

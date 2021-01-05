@@ -1,6 +1,6 @@
 package lectures.part1basics
 
-import lectures.part2oop.InheritanceAndTraits.Truck
+import lectures.part2oop.Inheritance.Truck
 
 object Objects {
 
