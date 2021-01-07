@@ -66,7 +66,7 @@ object HOFsCurries extends App {
     println(superAdder(5)(10))
 
     //functions with multiple parameter lists
-    def curriedFormatter(c: String) (x: Double): String = c.format(x)
+    def curriedFormatter(pattern: String) (num: Double): String = pattern.format(num)
     val standardFormat: (Double => String) = curriedFormatter("%4.2f")
     val preciseFormat: (Double => String) = curriedFormatter("%10.8f")
 
