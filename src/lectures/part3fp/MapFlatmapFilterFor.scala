@@ -114,4 +114,12 @@ object MapFlatmapFilterFor extends App {
   }
 
   println("Overloaded Map: " + mapOverloaded)
+
+  /*
+    1. MyList supports for comprehensions?
+    map(f: A => B) =. MyList[A]
+    filter(p: A => Boolean) => MyList[B]
+    flatMap(f: A => MyList[B]) => MyList[B]
+    2. A small collection of at most ONE element - Maybe[+T]
+   */
 }

@@ -160,16 +160,30 @@ abstract class MyList[+A] {
     println((listOfIntegers ++ anotherListOfIntegers).toString)
     println(listOfIntegers.flatMap(elem => new Cons(elem, new Cons(elem + 1, Empty))).toString)
     println(cloneListOfIntegers == listOfIntegers)
-
     listOfIntegers.foreach(x => println(x))
     println("short notation")
     listOfIntegers.foreach(println)
-
     println(listOfIntegers.sort((x, y) => y - x))
-
     println(anotherListOfIntegers.zipWith[String, String](listOfStrings, _ + "-" + _))
-
     println(listOfIntegers.fold(0)(_+_))
+
+    // for comprehensions
+    val listIntegersAndStringComprehensions = for {
+      n <- listOfIntegers
+      string <- listOfStrings
+    }yield n + "-" + string
+    println(listIntegersAndStringComprehensions)
+
+    println(for{
+      n <- listOfIntegers
+      string <- listOfStrings
+    }yield n + "--" + string)
+
+    println("Map: " + listOfIntegers.map(x => x))
+
+    println("Map + println")
+    listOfIntegers.map(println)
+
   }
 
 
